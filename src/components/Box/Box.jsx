@@ -2,24 +2,39 @@ import React from 'react';
 import './Box.css';
 
 
-const Box = ({array})=>{
+const Box = ({person})=>{
 
 
     return (
         <>
 
-        <div>
+        <div className='mainContainers'>
 
-            {array.map((item, index) => (
 
                 
-            <div key={index}>
-               <h1>{item.name}</h1>
-               <h2>{item.fname}</h2>
+            <div className='card' >
+                <div className='insideCard'>
+                    <h1 >{person.title}</h1>
+                   
+                   
+                    <button >' ' '</button>    
+                </div>
+                <div className='line'></div>
+
+               <div className='afterAddButton' style={{display:"none"}} >
+                  <input type="text" placeholder='enter value' style={{ width:"90%"    }} />
+                   <div className='savediv'>
+                    <button>Save</button>
+                    <button>Cancel</button>
+                   </div>
+               </div>
+               
+               <div className='addbuttondiv'>
+                <button>+  Add another Card</button>
+               </div>
             </div>
 
-            )
-            )}
+           
        
         </div>
         </>

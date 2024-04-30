@@ -1,17 +1,22 @@
-import React from 'react'
-import Box from '../../components/Box/Box'
-import data from '../../components/card/Card.jsx'
-
-
+import React from "react";
+import data from "../../components/card/Card.js";
+import Box from "../../components/Box/Box.jsx";
 
 function Home() {
   return (
     <>
+      <div style={{ display: "flex", gap: "1rem" }}>
+        {data.map((person, index) => (
+          <>
+            <Box key={index} person={person} />
+          </>
+        ))}
 
-      <Box array={data} />
+        {/* <Box/> */}
+      </div>
+    
 
-
- {/* <div className="Appm">
+      {/* <div className="Appm">
       <h1>Project Management</h1>
       <div className="container">
         <Box title="UI/UX Designers" />
@@ -19,10 +24,8 @@ function Home() {
         <Box title="Backend" />
       </div>
   </div>    */}
-    
-    
-     </>
-  )
+    </>
+  );
 }
 
 export default Home;

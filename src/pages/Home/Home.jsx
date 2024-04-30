@@ -5,7 +5,7 @@ import Box from "../../components/Box/Box.jsx";
 function Home() {
   return (
     <>
-      <div style={{ display: "flex", gap: "1rem" }}>
+      <div style={{ display: "grid",gridTemplateColumns:"repeat(4 ,1fr)",width:"100%" ,gridTemplateRows:"auto", gap: "1rem" }}>
         {data.map((person, index) => (
           <>
             <Box key={index} person={person} />

@@ -1,52 +1,64 @@
-import React from 'react';
-import './Box.css';
+import React, { useState } from "react";
+import "./Box.css";
 
 
-const Box = ({person})=>{
+const Box = ({ person }) => {
+  const [addCard, setAddCard] = useState(false);
+  const handleClick = () => {
+    setAddCard(!addCard);
+  };
 
 
-    return (
-        <>
+  return (
+    <>
+      <div className="mainContainers">
+        <div className="card">
+          <div className="insideCard">
+            <h1>{person.title}</h1>
 
-        <div className='mainContainers'>
+            <button>' ' '</button>
+          </div>
+          <div className="line"></div>
 
-
-                
-            <div className='card' >
-                <div className='insideCard'>
-                    <h1 >{person.title}</h1>
-                   
-                   
-                    <button >' ' '</button>    
-                </div>
-                <div className='line'></div>
-
-               <div className='afterAddButton' style={{display:"none"}} >
-                  <input type="text" placeholder='enter value' style={{ width:"90%"    }} />
-                   <div className='savediv'>
-                    <button>Save</button>
-                    <button>Cancel</button>
-                   </div>
-               </div>
-               
-               <div className='addbuttondiv'>
-                <button>+  Add another Card</button>
-               </div>
+          {addCard && (
+            <div className="afterAddButton" style={{ display: "" }}>
+              <input
+                type="text"
+                placeholder="enter value"
+                style={{ width: "90%" }}
+              />
+              <div className="savediv">
+                <button>Save</button>
+                <button onClick={(e) => setAddCard(false)}>Cancel</button>
+              </div>
             </div>
+          )}
 
-           
-       
+          {/* {addCard && ( */}
+            <div className="afterSave" style={{ display: "none" }}>
+              <div className="headEdit">
+                <h1>Input value</h1>
+                <button>edit</button>
+              </div>
+
+              <div className="nextPre">
+                <button> Next </button>
+                <button>Delete</button>
+                <button> Previous</button>
+              </div>
+            </div>
+          {/* )} */}
+          {addCard || (
+            <div className="addbuttondiv">
+              <button onClick={handleClick}>+ Add another Card</button>
+            </div>
+          )}
         </div>
-        </>
-    )
-
-
-
-
-
-
-}
-export default Box
+      </div>
+    </>
+  );
+};
+export default Box;
 
 // const Box = ({ title }) => {
 //   const [names, setNames] = useState([]);

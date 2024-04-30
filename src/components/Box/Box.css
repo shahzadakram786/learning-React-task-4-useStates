@@ -3,7 +3,8 @@
     padding: 10px;
     display: flex;
     justify-content: center;
-    width: 400px;
+    width: 300px;
+    height: fit-content;
     border-radius: 10px;
     box-shadow: 5px 5px 10px  grey;
 
@@ -46,16 +47,15 @@
 .insideCard button:hover{
     color: blue; 
     border-bottom: 1px solid blue;
-    /* border: 1px solid rgb(136, 136, 243); */
-    /* border-radius: 5px; */
     
 }
+
+
 
 .afterAddButton {
    
     height: auto;
     border-radius: 10px ;
-    /* border: 2px solid rgb(181, 164, 164); */
     box-shadow: 1px 1px 10px grey;
     transition: 0.3s ease;
     margin-bottom: 16px;
@@ -67,8 +67,55 @@
 
 
 
+.afterSave {
+    padding: 10px;
+    /* background-color: yellow; */
+    /* border: 2px solid black; */
+    border-radius: 10px ;
+    height: auto;
+    margin-bottom: 10px;
+    box-shadow: 1px 1px 10px grey;
+    transition: 0.3s ease;
 
 
+}
+.afterSave:hover{
+ 
+    box-shadow: 5px 5px 10px grey;
+}
+.headEdit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    
+}
+
+.headEdit button {
+ 
+    height: fit-content;
+    cursor: pointer;
+
+}
+
+.headEdit h1 {
+    text-align: left;
+    filter: drop-shadow(10px red, 10px);
+    font-size: 20px;
+    text-transform: capitalize;
+   
+
+}
+.nextPre{
+    display: flex;
+    justify-content: space-between;
+}
+.nextPre button {
+ 
+    margin-bottom: 10px;
+    cursor: pointer;
+
+}
 
 
 .savediv{

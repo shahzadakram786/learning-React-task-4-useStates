@@ -69,8 +69,6 @@
 
 .afterSave {
     padding: 10px;
-    /* background-color: yellow; */
-    /* border: 2px solid black; */
     border-radius: 10px ;
     height: auto;
     margin-bottom: 10px;
@@ -139,7 +137,7 @@ input{
     background-color: rgb(255, 255, 255);
     color: grey;
     border: none;
-    cursor: pointer;
+    cursor: text;
     transition: 0.3s ease;
 }
 .line{

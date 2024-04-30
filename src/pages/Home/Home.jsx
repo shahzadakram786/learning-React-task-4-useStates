@@ -1,8 +1,13 @@
-import React from "react";
+// import React, { useState } from "react";
 import data from "../../components/card/Card.js";
 import Box from "../../components/Box/Box.jsx";
 
 function Home() {
+
+
+  
+
+
   return (
     <>
       <div style={{ display: "grid",gridTemplateColumns:"repeat(4 ,1fr)",width:"100%" ,gridTemplateRows:"auto", gap: "1rem" }}>

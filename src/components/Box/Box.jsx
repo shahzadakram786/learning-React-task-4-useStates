@@ -1,14 +1,62 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
+import { useState } from "react";
 import "./Box.css";
 
-
 const Box = ({ person }) => {
-  const [addCard, setAddCard] = useState(false);
-  const handleClick = () => {
-    setAddCard(!addCard);
-  };
+
+    // for add card button 
+    const [addCard , setAddCard] = useState(false)
+    const [addSecondCard , setAddSecondCard] = useState(false)
+
+    const [uiux , setUiUx] = useState([])
+    // for inputt 
+    const [tempName, setTempName ] = useState(" ") 
 
 
+const handleClick = () => {
+   setAddCard(!addCard);
+
+}
+
+const handleSave = () => {
+     
+    setAddSecondCard(!addSecondCard) 
+    setAddCard(!addCard)
+    let toSave = { name: tempName, arrayName: person.title };
+    console.log(toSave)
+
+}
+
+
+const handleDelete = () => {
+   
+    const conformation = window.confirm('Are you sure you want to delete this card ? ')
+    if (conformation) { 
+        setAddSecondCard(!addSecondCard) 
+    }
+
+}
+
+
+
+const handleEdit = () => {
+    console.log("edit button")
+
+}
+
+const handleNext = (info) => {
+    console.log("next button")
+    let newdata = {}
+
+    if (info.arrayName === "Ui/UX" ){
+          newdata = {
+            id:"Ui/UX".length + 1,
+            name: info.name
+         }
+    }
+    setUiUx([...uiux , newdata])
+}
+  
   return (
     <>
       <div className="mainContainers">
@@ -20,39 +68,57 @@ const Box = ({ person }) => {
           </div>
           <div className="line"></div>
 
-          {addCard && (
+          
+          {addCard && 
             <div className="afterAddButton" style={{ display: "" }}>
               <input
                 type="text"
                 placeholder="enter value"
-                style={{ width: "90%" }}
+                style={{ width: "85%" }}
+                onChange={(e) => setTempName(e.target.value) }
+                
               />
               <div className="savediv">
-                <button>Save</button>
+                <button onClick={handleSave}>Save</button>
                 <button onClick={(e) => setAddCard(false)}>Cancel</button>
               </div>
             </div>
-          )}
+            
+            }
+     
+
 
           {/* {addCard && ( */}
-            <div className="afterSave" style={{ display: "none" }}>
-              <div className="headEdit">
-                <h1>Input value</h1>
-                <button>edit</button>
-              </div>
 
-              <div className="nextPre">
-                <button> Next </button>
-                <button>Delete</button>
-                <button> Previous</button>
-              </div>
+         {addSecondCard && 
+          <div className="afterSave" >
+            <div className="headEdit">
+              <h1>{tempName}</h1>
+              <button onClick={handleEdit}>edit</button>
             </div>
-          {/* )} */}
-          {addCard || (
+
+            <div className="nextPre">
+
+              {person.title !== "Ui/UX" && <button> Prev </button>}
+              
+              <button onClick={handleDelete}>Delete</button>
+
+              {person.title !== "full stack developer" && (<button onClick={handleNext}> Next</button>)}
+
+
+            </div>
+          </div>
+          
+          }
+         
+    
+
+          {addCard || 
             <div className="addbuttondiv">
               <button onClick={handleClick}>+ Add another Card</button>
             </div>
-          )}
+            }
+         
         </div>
       </div>
     </>

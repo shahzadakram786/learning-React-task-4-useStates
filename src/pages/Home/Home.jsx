@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import data from "../../components/card/Card.js";
+import {data , centerBox , rightBox} from "../../components/card/Card.js";
 import Box from "../../components/Box/Box.jsx";
 
 function Home() {
@@ -13,7 +13,7 @@ function Home() {
       <div style={{ display: "grid",gridTemplateColumns:"repeat(4 ,1fr)",width:"100%" ,gridTemplateRows:"auto", gap: "1rem" }}>
         {data.map((person, index) => (
           <>
-            <Box key={index} person={person} />
+            <Box key={index} person={person}  />
           </>
         ))}
 

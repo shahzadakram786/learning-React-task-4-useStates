@@ -17,4 +17,8 @@ const data = [
   },
 ];
 
-export default data;
+
+const centerBox = [];
+const rightBox = [];
+
+export {data , centerBox , rightBox};

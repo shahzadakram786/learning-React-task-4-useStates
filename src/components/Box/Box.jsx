@@ -2,13 +2,14 @@
 import { useState } from "react";
 import "./Box.css";
 
-const Box = ({ person }) => {
+const Box = ({ person ,savedata}) => {
 
     // for add card button 
     const [addCard , setAddCard] = useState(false)
     const [addSecondCard , setAddSecondCard] = useState(false)
 
     const [uiux , setUiUx] = useState([])
+    const [ savedata , setSavedata] = useState([])
     // for inputt 
     const [tempName, setTempName ] = useState(" ") 
 
@@ -18,12 +19,27 @@ const handleClick = () => {
 
 }
 
-const handleSave = () => {
+const handleSave = (info) => {
      
     setAddSecondCard(!addSecondCard) 
     setAddCard(!addCard)
     let toSave = { name: tempName, arrayName: person.title };
-    console.log(toSave)
+    // setTempName("")/
+    console.log("to save",setUiUx(toSave))
+    savedata(toSave)
+
+
+
+    let newdata = {}
+
+    if (info.arrayName === "Ui/UX" ){
+          newdata = {
+            id:uiux.length + 1,
+            name: info.name
+         }
+    }
+    setUiUx([...uiux , newdata])
+    console.log(newdata)
 
 }
 
@@ -46,15 +62,7 @@ const handleEdit = () => {
 
 const handleNext = (info) => {
     console.log("next button")
-    let newdata = {}
-
-    if (info.arrayName === "Ui/UX" ){
-          newdata = {
-            id:"Ui/UX".length + 1,
-            name: info.name
-         }
-    }
-    setUiUx([...uiux , newdata])
+   
 }
   
   return (

@@ -1,5 +1,5 @@
 // import React, { useState } from "react";
-import {data , centerBox , rightBox} from "../../components/card/Card.js";
+import {data , centerBox , rightBox} from "../../components/card/Card.jsx";
 import Box from "../../components/Box/Box.jsx";
 
 function Home() {

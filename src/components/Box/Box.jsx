@@ -2,16 +2,18 @@
 import { useState } from "react";
 import "./Box.css";
 
-const Box = ({ person ,savedata}) => {
+const Box = ({ person }) => {
 
     // for add card button 
     const [addCard , setAddCard] = useState(false)
     const [addSecondCard , setAddSecondCard] = useState(false)
 
-    const [uiux , setUiUx] = useState([])
-    const [ savedata , setSavedata] = useState([])
+    // const [uiux , setUiUx] = useState([])
+    // const [ savedata , setSavedata] = useState([])
     // for inputt 
     const [tempName, setTempName ] = useState(" ") 
+    const [title, setTitle] = useState("");
+
 
 
 const handleClick = () => {
@@ -21,25 +23,14 @@ const handleClick = () => {
 
 const handleSave = (info) => {
      
-    setAddSecondCard(!addSecondCard) 
-    setAddCard(!addCard)
-    let toSave = { name: tempName, arrayName: person.title };
-    // setTempName("")/
-    console.log("to save",setUiUx(toSave))
-    savedata(toSave)
-
-
-
-    let newdata = {}
-
-    if (info.arrayName === "Ui/UX" ){
-          newdata = {
-            id:uiux.length + 1,
-            name: info.name
-         }
-    }
-    setUiUx([...uiux , newdata])
-    console.log(newdata)
+  // setAddSecondCard(!addSecondCard);
+  // setAddCard(!addCard);
+  // const toSave = { name: tempName, arrayName: person.title };
+  // setUiUx([...uiux, toSave]);
+  setAddSecondCard(" ");
+  setAddCard(!false);
+  setTitle(tempName); // Update the title with the entered name
+  setTempName("");
 
 }
 
@@ -57,7 +48,10 @@ const handleDelete = () => {
 
 const handleEdit = () => {
     console.log("edit button")
-
+setAddSecondCard(!addSecondCard);
+  setAddCard(!false);
+  setTitle(tempName); // Update the title with the entered name
+  setTempName("");
 }
 
 const handleNext = (info) => {
@@ -101,7 +95,7 @@ const handleNext = (info) => {
          {addSecondCard && 
           <div className="afterSave" >
             <div className="headEdit">
-              <h1>{tempName}</h1>
+              <h1>{title || tempName}</h1>
               <button onClick={handleEdit}>edit</button>
             </div>
 
@@ -121,11 +115,11 @@ const handleNext = (info) => {
          
     
 
-          {addCard || 
+          {/* {addCard ||  */}
             <div className="addbuttondiv">
               <button onClick={handleClick}>+ Add another Card</button>
             </div>
-            }
+            {/* // } */}
          
         </div>
       </div>

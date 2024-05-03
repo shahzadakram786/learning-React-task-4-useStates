@@ -4,7 +4,7 @@ const Input = ({ setInput, setSaveAfter, setNewValue, newValue }) => {
 
 
   const handleSave = () => {
-    setSaveAfter(true);
+    setSaveAfter(prevSaveAfter => [...prevSaveAfter, newValue]);
     setInput(false);
     console.log(newValue);
   };

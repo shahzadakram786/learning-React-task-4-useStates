@@ -52,7 +52,11 @@ const Box = ({ listOne }) => {
               setInput={setInput}
               setNewValue={setNewValue}
               handleSave={handleSave}
+              setSaveAfter={setSaveAfter}
+
             />
+
+
           ) : null}
 
           {saveAfter &&
@@ -74,4 +78,7 @@ const Box = ({ listOne }) => {
     </>
   );
 };
+
+
+
 export default Box;

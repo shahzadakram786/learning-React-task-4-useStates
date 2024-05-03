@@ -15,16 +15,17 @@ const Input = ({ setInput, setSaveAfter, setNewValue, newValue }) => {
   };
 
   return (
-    <div className="afterSave">
+    <div className="afterSave" >
       <input
         type="text"
         placeholder="enter value"
-        style={{ width: "85%" }}
+        style={{ width: "90%" }}
         onChange={(e) => setNewValue(e.target.value)}
       />
-
-      <button onClick={handleSave}>Save</button>
-      <button onClick={handleCancel}>Cancel</button>
+      <div style={{display:"flex", justifyContent:"space-between"}}>
+        <button onClick={handleSave}>Save</button>
+        <button onClick={handleCancel}>Cancel</button>
+      </div>
     </div>
   );
 };

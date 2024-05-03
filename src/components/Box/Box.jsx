@@ -7,14 +7,18 @@ import CardAfterSave from "../aftersave/CardAfterSave";
 
 // import CardAfterSave from "../aftersave/CardAfterSave";
 
-const Box = ({ listOne }) => {
+const Box = ({ listOne,title }) => {
   const [input, setInput] = useState(false);
   const [saveAfter, setSaveAfter] = useState([]);
   const [newValue, setNewValue] = useState("");
 
+  
+
   /////////////////////////////////////////////
   const handleClick = () => {
     setInput(true);
+    console.log("add another button clicked ")
+
   };
 
   const handleSave = () => {
@@ -40,7 +44,7 @@ const Box = ({ listOne }) => {
       <div className="mainContainers">
         <div className="card">
           <div className="insideCard">
-            <h1>helodd</h1>
+            <h1>{title}</h1>
 
             <button>' ' '</button>
           </div>
@@ -66,6 +70,8 @@ const Box = ({ listOne }) => {
                   key={index}
                   newValue={data}
                   setSaveAfter={setSaveAfter}
+                  index={index}
+                  setInput={setInput}
                 />
               );
             })}

@@ -31,16 +31,21 @@ const Box = ({
   //       setSaveAfter(Response.data);
   //     });
   // }, []);
+  // setNewValue("nasir")
+
   useEffect(() => {
     axios
       .get("https://api.lumiplace.io/app.v1/api/getArticles")
       .then(function (response) {
         setSaveAfter(response.data);
+        
       })
       .catch(function (error) {
         // handle error
         // console.log(error);
       });
+  setNewValue("nasir")
+
   }, []);
 
   /////////////////////////////////////////////

@@ -1,0 +1,189 @@
+.body {
+    width: 100%;
+    /* height: 81.5vh; */
+    margin-bottom: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.container {
+    /* background-color: red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    padding: 2rem;
+    align-items: start;
+    gap: 2rem;
+}
+
+.card {
+    border-radius: 30px;
+    overflow: hidden;
+    /* width: 25%; */
+    transition: 0.4s ease;
+}
+
+.verified {
+    color: aqua;
+}
+
+.card:hover {
+    cursor: pointer;
+    box-shadow: 0px 0px 10px grey;
+}
+
+.card * {
+    background-color: rgb(42, 45, 40);
+}
+
+.img_parent {
+    height: 40vh;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.img_parent img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.text_parent {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text_parent h2 {
+    font-size: 1.2vmax;
+}
+
+.text_child {
+    display: flex;
+    justify-content: space-between;
+}
+
+.text_child>div h3 {
+    font-size: 1vmax;
+    color: grey;
+}
+
+
+/* below the commented code was for the google page */
+
+
+/* 
+.parent_input{
+    width: 40%;
+    padding: 1rem;
+    border-radius: 30px ;
+    border: 1px solid  grey;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition:  0.2s ease;
+
+}
+
+.section input{
+    width: 80%;
+    background: transparent;
+    border: none;
+   color: white;
+   font-size: 1.2rem;
+   outline: none;
+
+
+}
+
+.parent_input:hover {
+    background: #303134;
+    border: none;
+    box-shadow: 0px 0px 10px black;
+}
+.search{
+    height: 3vh;
+    background:transparent;
+
+}
+
+.search img{
+    background:transparent;
+
+    height: 100%;
+    width: 100%;
+}
+
+.lense , .mic{
+    height: 3vh;
+    background:transparent;
+
+
+}
+.mic img , .lense  img {
+    height: 100%;
+    width: 100%;
+    background:transparent;
+}
+
+
+
+.below_parent {
+    display: flex;
+    gap: 2rem;
+}
+
+.below_parent button{
+    padding:1rem;
+    font-size: 0.8vmax;
+    color:white;
+    border: none;
+    background: #303134;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #303134 ;
+
+}
+.below_parent button:hover{
+border: 1px solid grey;
+
+}
+
+
+
+.below_below{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+ 
+}
+
+.below_below p{
+    color: white;
+}
+
+.below_below a{
+    font-size: 0.8vmax;
+    color: rgb(0, 157, 255);
+    text-decoration: none;
+}
+
+.below_below a:hover{
+    text-decoration: underline;
+}
+
+.below_below p{
+font-size: 0.7vmax;
+}
+
+.below_below > div {
+display: flex;
+gap: 0.8rem;
+
+} */

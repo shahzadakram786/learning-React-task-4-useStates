@@ -3,17 +3,19 @@ import { ImageURL } from "../../baseUrl/baseURL";
 const CardAfterSave = ({
   newValue,
   setSaveAfter,
-  index,
+  CurrentIndex,
   title,
   setInput,
-  handleN,
-  handleP,
+  handleNext,
+  handlePrevious,
   titleOne,
+  currentList,
   image,
   titleTwo,
   titleThree,
   titleFour,
 }) => {
+  // console.log(newValue);
   const handleEdit = () => {
     setInput();
     console.log("edit button clicked");
@@ -22,45 +24,44 @@ const CardAfterSave = ({
   const handleDelete = () => {
     setSaveAfter((prevSaveAfter) => {
       const updatedSaveAfter = [
-        ...prevSaveAfter.slice(0, index),
-        ...prevSaveAfter.slice(index + 1),
+        ...prevSaveAfter.slice(0, CurrentIndex),
+        ...prevSaveAfter.slice(CurrentIndex + 1),
       ];
       return updatedSaveAfter;
     });
   };
 
-  // const handleNext = () => {
-  //   console.log("Next button")
-  // }
+  const valOne = newValue.title;
+  const valTwo = newValue.image;
+  const handleN = () => {
+    handleNext(CurrentIndex, currentList, setSaveAfter, valOne, valTwo);
+  };
 
-  // const handlePrevious = () => {
-  //   console.log("prev button")
-  // }
+  const handleP = () => {
+    handlePrevious(CurrentIndex);
+  };
   console.log();
   return (
     <div className="afterSave">
       <div className="headEdit">
-        <h1>{title}</h1>
+        <h1>{newValue.title}</h1>
 
         <button onClick={handleEdit}>edit</button>
       </div>
+
       <img src={ImageURL + newValue.image} alt="promps" width="90%" />
       <div className="nextPre">
         {title === titleOne ? (
           <button onClick={handleN}>Next</button>
         ) : (
           <>
-            {" "}
+          
             <button onClick={handleP}>Previous</button>
             <button onClick={handleN}>Next</button>
           </>
         )}
-        {/* {(title === titleTwo && title === titleThree)?(
-          <>
-           
-          </>
-        ):null} */}
-        {/* {title === titleFour ? <button onClick={handleP}>Previous</button>:null} */}
+       
+        {title === titleFour ? <button onClick={handleP}>Previous</button>:null}
 
         <button onClick={handleDelete}>Delete</button>
       </div>

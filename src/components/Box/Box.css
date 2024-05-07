@@ -1,4 +1,4 @@
-.mainContainers{
+.mainContainers {
     margin: 10px;
     padding: 10px;
     display: flex;
@@ -6,94 +6,77 @@
     width: 300px;
     height: fit-content;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px  grey;
-
-
+    box-shadow: 5px 5px 10px grey;
 }
 
-
-.card{
-
-     padding:10px ; 
-     width: 300px;
+.card {
+    padding: 10px;
+    width: 300px;
 }
 
-.insideCard{
-    display:flex ;
-     justify-content:space-between;
-     align-items:center;
-   
+.insideCard {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .insideCard h1 {
     /* border-bottom:2px solid black; */
     text-transform: capitalize;
     color: black;
-    font-size:20px ;
-    text-align:left
+    font-size: 20px;
+    text-align: left
 }
 
-.insideCard button{
+.insideCard button {
     padding-top: 10px;
     font-weight: bolder;
     cursor: pointer;
     border: none;
     background: none;
     transition: 0.3s ease-in-out;
- 
-
 }
 
-.insideCard button:hover{
-    color: blue; 
+.insideCard button:hover {
+    color: blue;
     border-bottom: 1px solid blue;
-    
 }
-
-
 
 .afterAddButton {
-   
     height: auto;
-    border-radius: 10px ;
+    border-radius: 10px;
     box-shadow: 1px 1px 10px grey;
     transition: 0.3s ease;
     margin-bottom: 16px;
 }
-.afterAddButton:hover{
- 
+
+.afterAddButton:hover {
     box-shadow: 5px 5px 10px grey;
 }
 
-
-
 .afterSave {
     padding: 10px;
-    border-radius: 10px ;
+    border-radius: 10px;
     height: auto;
     margin-bottom: 10px;
     box-shadow: 1px 1px 10px grey;
     transition: 0.3s ease;
-
-
 }
-.afterSave:hover{
- 
+
+.afterSave:hover {
     box-shadow: 5px 5px 10px grey;
 }
+
 .headEdit {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
-    
 }
 
 .headEdit button {
- 
     height: fit-content;
     cursor: pointer;
-
 }
 
 .headEdit h1 {
@@ -101,37 +84,33 @@
     filter: drop-shadow(10px red, 10px);
     font-size: 20px;
     text-transform: capitalize;
-   
-
 }
-.nextPre{
+
+.nextPre {
     display: flex;
     justify-content: space-between;
 }
+
 .nextPre button {
- 
     margin-bottom: 10px;
     cursor: pointer;
-
 }
 
-
-.savediv{
+.savediv {
     padding: 10px;
     display: flex;
     justify-content: space-between;
-  
 }
 
 .savediv button {
-    cursor: pointer; 
+    cursor: pointer;
 }
 
-input{
-    outline: 1px solid grey ;
+input {
+    outline: 1px solid grey;
     margin-top: 1rem;
     margin-bottom: 1rem;
-    width: 100px; 
+    width: 100px;
     padding: 10px;
     border-radius: 5px;
     background-color: rgb(255, 255, 255);
@@ -140,17 +119,16 @@ input{
     cursor: text;
     transition: 0.3s ease;
 }
-.line{
 
-width: 100%;
-height: 2px;
-/* border:1px solid black; */
-background: rgba(97, 95, 95, 0.188);
-margin-bottom: 2rem;
-
+.line {
+    width: 100%;
+    height: 2px;
+    /* border:1px solid black; */
+    background: rgba(97, 95, 95, 0.188);
+    margin-bottom: 2rem;
 }
-.addbuttondiv button{
-  
+
+.addbuttondiv button {
     border: none;
     color: rgb(48, 48, 217);
     font-size: 16px;
@@ -160,20 +138,10 @@ margin-bottom: 2rem;
     margin-bottom: 10px;
 }
 
-.addbuttondiv button:hover{
-
+.addbuttondiv button:hover {
     border-bottom: 1px solid blue;
     /* background-color: rgba(21, 184, 184, 0.281); */
-    
 }
-
-
-
-
-
-
-
-
 
 
 /* .box{
@@ -265,14 +233,18 @@ input{
     margin-top: 1rem;
     margin-bottom: 1rem;
     /* width: 100px; */
-    /* padding: 10px;
+
+
+/* padding: 10px;
     border-radius: 15px;
     background-color: rgb(255, 255, 255);
     color: grey;
     border: none;
     cursor: pointer;
     transition: 0.3s ease;
-} */ 
+} */
+
+
 /* 
 .Cards{
    

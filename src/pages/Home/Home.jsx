@@ -1,38 +1,61 @@
-// import React, { useState } from "react";
-// import { data } from "../../components/card/Card.jsx";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Box from "../../components/Box/Box.jsx";
-// import axios from "axios";
+import axios from "axios";
+import Navigation from "../../components/navigationBar/Navigation.jsx";
+import Header from "../../components/pagesNew/Header/index.jsx";
 
 function Home({ handleCancel }) {
+  
   const [titleOne, setTitleOne] = useState("Ux/Ui");
   const [titleTwo, setTitleTwo] = useState("FrontEnd");
-
-  const [titleThree, setTitleThree] = useState("BackEnd");
-
+  const [titleThree, ] = useState("BackEnd");
   const [titleFour, setTitleFour] = useState("FullStack");
+  /////////////
+  const [SaveOne, setSaveOne] = useState([]);
+  const [saveTwo, setSaveTwo] = useState([]);
 
-  const [cardPosition, setCardPosition] = useState(0); // To track the position of the card
-  const totalBoxes = 4; // Total number of boxes
+  const [saveThree, setSaveThree] = useState([]);
 
+  const [saveFour, setSaveFour] = useState([]);
 
+  // const [cardPosition, setCardPosition] = useState(0); // To track the position of the card
+  useEffect(() => {
+    axios
+      .get("https://api.lumiplace.io/app.v1/api/getArticles")
+      .then(function (response) {
+        setSaveOne(response.data);
+        setSaveTwo(response.data);
 
-  const handleNext = () => {
-    if (cardPosition < totalBoxes - 1) {
-      setCardPosition(cardPosition + 1);
+        setSaveThree(response.data);
+        setSaveFour(response.data);
+      })
+      .catch(function (error) {
+        console.error("Error fetching data:", error);
+      });
+  }, []);
+  const handleNext = (CurrentIndex, currentList, newValue) => {
+    const filterData = currentList.filter(
+      (data, index) => index !== CurrentIndex
+    );
+    setSaveOne(filterData);
+    if (currentList === SaveOne) {
+      setSaveTwo((prev) => [...prev, newValue]);
+    } else if (currentList === saveTwo) {
+      setSaveTwo(filterData);
+      setSaveThree((prev) => [...prev, newValue]);
+    } else if (currentList === saveThree) {
+      setSaveFour((prev) => [...prev, newValue]);
     }
+    console.log(newValue);
   };
 
-  const handlePrevious = () => {
-    if (cardPosition > 0) {
-      setCardPosition(cardPosition - 1);
-    }
-  };
-
-  // const [editClick , setEditClick] = useState(false)
+  const handlePrevious = () => {};
 
   return (
     <>
+     
+     <Header/>
+     
       <div
         style={{
           display: "grid",
@@ -45,38 +68,34 @@ function Home({ handleCancel }) {
         <Box
           handleCancel={handleCancel}
           title={titleOne}
-          // position={0}
-          cardPosition={cardPosition}
-          handleN={handleNext}
-          handleP={handlePrevious}
-          titleOne={titleOne}
+          handleNext={handleNext}
+          handlePrevious={handlePrevious}
+          saveAfter={SaveOne}
+          setSaveAfter={setSaveOne}
         />
 
         <Box
           title={titleTwo}
-          // position={1}
-          cardPosition={cardPosition}
-          handleN={handleNext}
-          handleP={handlePrevious}
-          titleTwo={titleTwo}
+          handleNext={handleNext}
+          handlePrevious={handlePrevious}
+          saveAfter={saveTwo}
+          setSaveAfter={setSaveTwo}
         />
 
         <Box
           title={titleThree}
-          // position={2}
-          cardPosition={cardPosition}
-          handleN={handleNext}
-          handleP={handlePrevious}
-          titleThree={titleThree}
+          handleNext={handleNext}
+          handlePrevious={handlePrevious}
+          saveAfter={saveThree}
+          setSaveAfter={setSaveThree}
         />
 
         <Box
           title={titleFour}
-          // position={3}
-          cardPosition={cardPosition}
-          handleN={handleNext}
-          handleP={handlePrevious}
-          titleFour={titleFour}
+          handleNext={handleNext}
+          handlePrevious={handlePrevious}
+          saveAfter={saveFour}
+          setSaveAfter={setSaveFour}
         />
       </div>
     </>

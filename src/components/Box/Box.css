@@ -6,12 +6,13 @@
     width: 300px;
     height: fit-content;
     border-radius: 10px;
-    box-shadow: 5px 5px 10px grey;
+    box-shadow: 5px 5px 10px black;
 }
 
 .card {
     padding: 10px;
     width: 300px;
+    /* background-color: red; */
 }
 
 .insideCard {
@@ -23,12 +24,14 @@
 .insideCard h1 {
     /* border-bottom:2px solid black; */
     text-transform: capitalize;
-    color: black;
+    color: rgb(173, 165, 165);
     font-size: 20px;
     text-align: left
 }
 
 .insideCard button {
+    /* color: white; */
+    color: white;
     padding-top: 10px;
     font-weight: bolder;
     cursor: pointer;
@@ -37,12 +40,13 @@
     transition: 0.3s ease-in-out;
 }
 
-.insideCard button:hover {
-    color: blue;
-    border-bottom: 1px solid blue;
-}
+
+/* .insideCard button:hover {
+    border-bottom: 1px solid white;
+} */
 
 .afterAddButton {
+    /* color: white; */
     height: auto;
     border-radius: 10px;
     box-shadow: 1px 1px 10px grey;
@@ -130,7 +134,8 @@ input {
 
 .addbuttondiv button {
     border: none;
-    color: rgb(48, 48, 217);
+    /* color: rgb(48, 48, 217); */
+    color: rgb(198, 158, 158);
     font-size: 16px;
     cursor: pointer;
     background: none;
@@ -139,7 +144,7 @@ input {
 }
 
 .addbuttondiv button:hover {
-    border-bottom: 1px solid blue;
+    border-bottom: 1px solid white;
     /* background-color: rgba(21, 184, 184, 0.281); */
 }
 

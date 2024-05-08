@@ -24,8 +24,8 @@
 .cardAbout:hover {
     cursor: pointer;
     box-shadow: 1px 1px 5px black;
-    transform: scale(1.01);
-    /* transform: skew(10deg); */
+    transform: scale(1.02);
+    /* transform: skew(-1deg); */
 }
 
 .cardAbout * {

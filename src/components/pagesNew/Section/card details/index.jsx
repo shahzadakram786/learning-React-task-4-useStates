@@ -7,7 +7,7 @@ function CardCom({ cardData, addCardToBuyList }) {
   };
 
   return (
-    <div className="card" style={{width:"340px"}}>
+    <div className="cardAbout" style={{width:"340px"}}>
       <div className="img_parent">
         <img src={cardData.image} alt="shoes" />
       </div>

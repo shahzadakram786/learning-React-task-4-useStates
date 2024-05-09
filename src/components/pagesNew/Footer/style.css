@@ -1,43 +1,41 @@
-.footer{
+.footer {
+    margin-top: 5rem;
     background-color: red;
     display: flex;
     flex-direction: column;
-
 }
 
-.footer p{
+.footer p {
     padding: 1rem;
     color: white;
     font-size: 0.9vmax;
     background: #171717;
-
 }
-.parent_att{
+
+.parent_att {
     border-top: 1px solid grey;
     display: flex;
     justify-content: space-between;
-    padding: 1rem ;
+    padding: 1rem;
     background: #171717;
-
 }
 
-.parent_att > div a{
+.parent_att>div a {
     color: white;
     text-decoration: none;
     font-size: 0.9vmax;
     background: #171717;
- 
 }
 
-
-.child_one , .child_two{
+.child_one,
+.child_two {
     display: flex;
     align-items: center;
     gap: 2rem;
     background: #171717;
-
 }
 
-.child_one a:hover , .child_two a:hover{
-text-decoration: underline;
+.child_one a:hover,
+.child_two a:hover {
+    text-decoration: underline;
 }

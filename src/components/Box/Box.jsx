@@ -29,6 +29,7 @@ const Box = ({
 
   return (
     <>
+      {/* <Skeleton > */}
       <div className="mainContainers">
         <div className="card">
           <div className="insideCard">
@@ -70,6 +71,7 @@ const Box = ({
           </div>
         </div>
       </div>
+      {/* </Skeleton> */}
     </>
   );
 };

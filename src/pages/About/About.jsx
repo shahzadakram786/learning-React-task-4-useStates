@@ -6,9 +6,7 @@ import Footer from "../../components/pagesNew/Footer";
 const About = () => {
   return (
     <>
-      <Header />
       <Section />
-      <Footer />
     </>
   );
 };

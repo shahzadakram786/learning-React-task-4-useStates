@@ -1,25 +1,19 @@
 import React from "react";
 import "./style.css";
 import Navigation from "../../navigationBar/Navigation";
+import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
 // import { PiDotsNineBold } from "react-icons/pi";
 // import img1 from "../Header/imges/dp-transformed.png"
 function Header() {
-  return (<>
-   
+  return (
+    <>
+      <div className="main_div">
+        <Navigation />
 
-    <div className="main_div">
-    <Navigation/>
-      <a href="#Gmail">Gmail</a>
-      <a href="#Images">Images</a>
-      {/* <PiDotsNineBold className="icons_dots" /> */}
-      <div className="circle_img">
-        {/* <img
-          // src={img1}
-          alt=""
-        /> */}
+        <div className="circle_img"></div>
       </div>
-    </div>
-    </>);
+    </>
+  );
 }
 
 export default Header;

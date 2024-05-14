@@ -5,10 +5,9 @@ import Navigation from "../../components/navigationBar/Navigation.jsx";
 import Header from "../../components/pagesNew/Header/index.jsx";
 
 function Home({ handleCancel }) {
-  
   const [titleOne, setTitleOne] = useState("Ux/Ui");
   const [titleTwo, setTitleTwo] = useState("FrontEnd");
-  const [titleThree, ] = useState("BackEnd");
+  const [titleThree] = useState("BackEnd");
   const [titleFour, setTitleFour] = useState("FullStack");
   /////////////
   const [SaveOne, setSaveOne] = useState([]);
@@ -53,9 +52,6 @@ function Home({ handleCancel }) {
 
   return (
     <>
-     
-     <Header/>
-     
       <div
         style={{
           display: "grid",

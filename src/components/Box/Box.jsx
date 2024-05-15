@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
 import "./Box.css";
 import Input from "../inputComp/Input";
@@ -30,52 +30,54 @@ const Box = ({
   return (
     <>
       <div className="mainContainers">
-        <Skeleton>
-          <div className="card">
-            <div className="insideCard">
-              <Skeleton>
-                <h1>{title}</h1>
-              </Skeleton>
+        {/* <Skeleton> */}
+        <div className="card">
+          <div className="insideCard">
+            {/* <Skeleton> */}
+            {/* <Suspense> */}
+            <h1>{title}</h1>
+            {/* </Suspense> */}
+            {/* </Skeleton> */}
 
-              <Skeleton>
-                <button>' ' '</button>
-              </Skeleton>
-            </div>
-            <div className="line"></div>
-            {input ? (
-              <Input
-                newValue={newValue}
-                setInput={setInput}
-                setNewValue={setNewValue}
-                handleSave={handleSave}
-                setSaveAfter={setSaveAfter}
-              />
-            ) : null}
-            {saveAfter &&
-              saveAfter.map((data, index) => {
-                return (
-                  <CardAfterSave
-                    key={index}
-                    newValue={data}
-                    currentList={saveAfter}
-                    setSaveAfter={setSaveAfter}
-                    CurrentIndex={index}
-                    setInput={setInput}
-                    title={title}
-                    handleNext={handleNext}
-                    handlePrevious={handlePrevious}
-                    titleOne={titleOne}
-                    titleTwo={titleTwo}
-                    titleThree={titleThree}
-                    titleFour={titleFour}
-                  />
-                );
-              })}
-            <div className="addbuttondiv">
-              <button onClick={handleClick}>+ Add another Card</button>
-            </div>
+            {/* <Skeleton> */}
+            <button>' ' '</button>
+            {/* </Skeleton> */}
           </div>
-        </Skeleton>
+          <div className="line"></div>
+          {input ? (
+            <Input
+              newValue={newValue}
+              setInput={setInput}
+              setNewValue={setNewValue}
+              handleSave={handleSave}
+              setSaveAfter={setSaveAfter}
+            />
+          ) : null}
+          {saveAfter &&
+            saveAfter.map((data, index) => {
+              return (
+                <CardAfterSave
+                  key={index}
+                  newValue={data}
+                  currentList={saveAfter}
+                  setSaveAfter={setSaveAfter}
+                  CurrentIndex={index}
+                  setInput={setInput}
+                  title={title}
+                  handleNext={handleNext}
+                  handlePrevious={handlePrevious}
+                  titleOne={titleOne}
+                  titleTwo={titleTwo}
+                  titleThree={titleThree}
+                  titleFour={titleFour}
+                />
+              );
+            })}
+          <div className="addbuttondiv">
+            <button onClick={handleClick}>+ Add another Card</button>
+          </div>
+        </div>
+        {/* </Skeleton> */}
       </div>
     </>
   );

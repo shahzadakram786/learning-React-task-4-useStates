@@ -50,13 +50,13 @@ const CardAfterSave = ({
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsloading(false);
-    }, 1000);
+    }, 2000);
 
     return () => clearTimeout(timer);
   }, []);
 
   return (
-    <Skeleton key={key} isLoaded={!isLoading}>
+    <Skeleton isLoaded={!isLoading}>
       <div className="afterSave">
         <div className="headEdit">
           <h1>{newValue.title}</h1>

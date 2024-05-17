@@ -1,13 +1,12 @@
 import React from "react";
-import './style.css'
-
+import "./style.css";
 
 function Footer() {
   return (
-  <div className="footer">
+    <div className="footer" position="fixed">
       <div className="pak">
         <p>Pakistan</p>
-        </div>
+      </div>
       <div className="parent_att">
         <div className="child_one">
           <a href="#attr">About</a>
@@ -21,9 +20,8 @@ function Footer() {
           <a href="#attr">Settings</a>
         </div>
       </div>
-  </div>
-      
-     );
+    </div>
+  );
 }
 
 export default Footer;

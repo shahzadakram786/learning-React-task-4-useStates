@@ -1,6 +1,9 @@
 import { Skeleton } from "@chakra-ui/react";
 import { ImageURL } from "../../baseUrl/baseURL";
 import { useEffect, useState } from "react";
+import { Image } from "@chakra-ui/react";
+import { Heading } from "@chakra-ui/react";
+import { Button, ButtonGroup } from "@chakra-ui/react";
 
 const CardAfterSave = ({
   newValue,
@@ -56,30 +59,48 @@ const CardAfterSave = ({
   }, []);
 
   return (
-    <Skeleton isLoaded={!isLoading}>
+    <Skeleton isLoaded={!isLoading} borderRadius="5px">
       <div className="afterSave">
         <div className="headEdit">
-          <h1>{newValue.title}</h1>
+          <Heading color="white" size="sm" textTransform="capitalize">
+            {newValue.title}
+          </Heading>
 
-          <button onClick={handleEdit}>edit</button>
+          <Button
+            onClick={handleEdit}
+            isLoading
+            colorScheme="blue"
+            spinner="size={8}"
+            color="white"
+          >
+            edit
+          </Button>
         </div>
 
-        <img src={ImageURL + newValue.image} alt="promps" width="90%" />
+        <Image
+          boxSize="200px"
+          objectFit="cover"
+          src={ImageURL + newValue.image}
+          alt="props"
+          w="100%"
+          borderRadius="5px"
+        />
+        {/* <img src={ImageURL + newValue.image} alt="promps" width="90%" /> */}
         <div className="nextPre">
           {title === titleOne ? (
             <button onClick={handleN}>Next</button>
           ) : (
             <>
-              <button onClick={handleP}>Previous</button>
-              <button onClick={handleN}>Next</button>
+              <Button onClick={handleP}>Previous</Button>
+              <Button onClick={handleN}>Next</Button>
             </>
           )}
 
           {title === titleFour ? (
-            <button onClick={handleP}>Previous</button>
+            <Button onClick={handleP}>Previous</Button>
           ) : null}
 
-          <button onClick={handleDelete}>Delete</button>
+          <Button onClick={handleDelete}>Delete</Button>
         </div>
       </div>
     </Skeleton>

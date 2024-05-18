@@ -18,9 +18,11 @@ const Layout = () => {
       >
         <Header />
       </Box>
-      <Box as="main" Flex="1" overflowY="auto" mt="60px" mb="60px" h="auto">
+
+      <Box as="main" Flex="1" mt="60px" mb="60px" h="auto">
         <Outlet />
       </Box>
+
       <Box
         as="footer"
         position="fixed"

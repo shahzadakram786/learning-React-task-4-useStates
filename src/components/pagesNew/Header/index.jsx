@@ -8,13 +8,14 @@ import {
   Tab,
   TabPanel,
   Stack,
+  Flex,
 } from "@chakra-ui/react";
 import { Avatar, AvatarBadge } from "@chakra-ui/react"; // import { PiDotsNineBold } from "react-icons/pi";
 // import img1 from "../Header/imges/dp-transformed.png"
 function Header() {
   return (
     <>
-      <div className="main_div">
+      <Flex className="main_div">
         <Navigation />
 
         <Avatar
@@ -26,7 +27,7 @@ function Header() {
           <AvatarBadge boxSize="1em" bg="green.500" />
         </Avatar>
         {/* <div className="circle_img"></div> */}
-      </div>
+      </Flex>
     </>
   );
 }

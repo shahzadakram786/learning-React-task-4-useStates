@@ -57,9 +57,11 @@ function Section() {
             >
               withOut Using any State
             </h1>
+
             <Flex justifyContent={"center"}>
               <Divider my={"3em"} border={"2px solid white"} />
             </Flex>
+
             <CardList drops={drops} addCardToBuyList={addCardToBuyList} />
           </div>
           <div className="buy-cards">

@@ -1,6 +1,4 @@
-.container {
-    /* background-color: red; */
-    /* width: 100%; */
+/* .container {
     display: flex;
     flex-direction: column;
     justify-content: start;
@@ -8,6 +6,8 @@
     align-items: start;
     gap: 2rem;
 }
+
+
 
 .cardAbout {
     border: 2px solid black;
@@ -25,11 +25,9 @@
     cursor: pointer;
     box-shadow: 1px 1px 5px black;
     transform: scale(1.02);
-    /* transform: skew(-1deg); */
 }
 
 .cardAbout * {
-    /* width: 100%; */
     background-color: rgb(46, 53, 70);
 }
 
@@ -64,7 +62,7 @@
 .text_child>div h3 {
     font-size: 1vmax;
     color: grey;
-}
+} */
 
 
 /* below the commented code was for the google page */

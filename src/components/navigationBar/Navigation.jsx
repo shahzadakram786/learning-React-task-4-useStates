@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./navigation.css";
-import { Tabs, TabList, TabPanels, Tab, TabPanel } from "@chakra-ui/react";
+import { Tabs, TabList, Tab } from "@chakra-ui/react";
 
 const Navigation = () => {
   return (
@@ -21,11 +21,15 @@ const Navigation = () => {
                 </Link>
               </Tab>
               <Tab>
-                <a href="#Gmail">Gmail</a>
+                <Link className="link" href="#Gmail">
+                  Gmail
+                </Link>
               </Tab>
 
               <Tab>
-                <a href="#Images">Images</a>
+                <Link className="link" href="#Images">
+                  Images
+                </Link>
               </Tab>
             </TabList>
           </Tabs>

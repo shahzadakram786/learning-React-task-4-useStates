@@ -22,14 +22,15 @@ function CardCom({ cardData, addCardToBuyList }) {
   return (
     <Card
       className="cardAbout"
+      background=" linear-gradient(to left, #000046, #c33764)"
       border="3px solid black"
-      boxShadow="1px 1px 5px black"
+      boxShadow="1px 1px 5px #1cb5e0"
       borderRadius="10px"
       transition="0.5s ease"
       style={{ width: "340px" }}
       _hover={{
         // cursor: "pointer",
-        boxShadow: "2px 2px 10px black",
+        boxShadow: "2px 2px 10px #1cb5e0",
         transform: "scale(1.02)",
       }}
     >
@@ -88,11 +89,13 @@ function CardCom({ cardData, addCardToBuyList }) {
       <CardFooter>
         <Flex justifyContent="center" alignItems="center" w="100%">
           <Button
+            color="white"
             mr="auto"
             ml="auto"
+            background=" linear-gradient(60deg, #000046, #1cb5e0)"
             _hover={{
               // cursor: "pointer",
-              boxShadow: "2px 2px 10px black",
+              boxShadow: "2px 2px 10px #1cb5e0",
               transform: "scale(1.02)",
             }}
             onClick={() => BuyCards(cardData)}

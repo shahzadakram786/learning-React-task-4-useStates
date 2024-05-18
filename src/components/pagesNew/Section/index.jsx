@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
-import "./style.css";
 import drops from "../Section/card/index";
 import CardList from "./CardList";
 import BuyCards from "./CardList/Buycards";
-import { Divider, Flex, Spinner } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, Spinner } from "@chakra-ui/react";
 
 let buyCard = [];
 
@@ -43,54 +42,55 @@ function Section() {
           size="xl"
         />
       ) : (
-        <div className="body">
-          <div className="main2">
-            <h1
-              style={{
-                color: "black",
-                textAlign: "center",
-                padding: "2rem",
-                // marginBottom: "2rem",
-
-                textShadow: "1px 1px 10px grey",
-              }}
+        <Box
+          className="body"
+          p="20px"
+          h="auto"
+          mb="10px"
+          // mt="20px"
+          background=" linear-gradient(to left, #000046, #1cb5e0); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        "
+        >
+          <Box className="main2">
+            <Heading
+              mt="16px"
+              color="white"
+              textAlign="center"
+              textShadow="1px 1px 10px grey"
             >
-              withOut Using any State
-            </h1>
+              WithOut Using any State
+            </Heading>
 
             <Flex justifyContent={"center"}>
               <Divider my={"3em"} border={"2px solid white"} />
             </Flex>
 
             <CardList drops={drops} addCardToBuyList={addCardToBuyList} />
-          </div>
-          <div className="buy-cards">
-            <div>
-              <h1
-                style={{
-                  textAlign: "center",
-                  margin: "4rem",
-                  borderBottom: "2px solid white",
-                  padding: "2rem",
-                  textShadow: "1px 1px 10px white",
-                }}
+          </Box>
+          <Box className="buy-cards">
+            <Box>
+              <Heading
+                textAlign="center"
+                m="4rem"
+                color="white"
+                textShadow="1px 1px 10px grey"
               >
                 Buy Cards
-              </h1>
-            </div>
-            <div className="list-buy-cards" style={{}}>
-              <h1
-                style={{
-                  color: "grey",
-                  textAlign: "center",
-                  marginBottom: "150px",
-                }}
+              </Heading>
+            </Box>
+            <Divider m="16px" />
+            <Box mt="26px">
+              <Heading
+                size="sl"
+                textAlign="center"
+                mb="80px"
+                // mb={.}
               >
                 No Items no show
-              </h1>
-            </div>
-          </div>
-        </div>
+              </Heading>
+            </Box>
+          </Box>
+        </Box>
       )}
     </>
   );

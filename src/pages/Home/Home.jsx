@@ -3,7 +3,8 @@ import Box from "../../components/Box/Box.jsx";
 import axios from "axios";
 // import Navigation from "../../components/navigationBar/Navigation.jsx";
 // import Header from "../../components/pagesNew/Header/index.jsx";
-import { Spinner } from "@chakra-ui/react";
+import { Spinner, useMediaQuery } from "@chakra-ui/react";
+import { Grid, GridItem } from "@chakra-ui/react";
 
 function Home({ handleCancel }) {
   const [titleOne, setTitleOne] = useState("Ux/Ui");
@@ -15,6 +16,7 @@ function Home({ handleCancel }) {
   const [saveThree, setSaveThree] = useState([]);
   const [saveFour, setSaveFour] = useState([]);
   const [Loading1, setIsloading1] = useState(true);
+  const [islargerthan800] = useMediaQuery("(min-width : 800px)");
 
   useEffect(() => {
     const timer2 = setTimeout(() => {
@@ -65,14 +67,23 @@ function Home({ handleCancel }) {
           size="xl"
         />
       ) : (
-        <div
-          style={{
-            display: "grid",
-            gridTemplateColumns: "repeat(4 ,1fr)",
-            width: "100%",
-            gridTemplateRows: "auto",
-            gap: "1rem",
+        <Grid
+          templateColumns={{
+            base: "repeat(1,1fr)",
+            md: "repeat(2,1fr)",
+            lg: "repeat(3,1fr)",
+            xl: "repeat(4,1fr)",
           }}
+          gap="2rem"
+          style={
+            {
+              // display: "grid",
+              // gridTemplateColumns: "repeat(4 ,1fr)",
+              // width: "100%",
+              // gridTemplateRows: "auto",
+              // gap: "1rem",
+            }
+          }
           h="20vmin"
           bg="red"
         >
@@ -108,7 +119,7 @@ function Home({ handleCancel }) {
             saveAfter={saveFour}
             setSaveAfter={setSaveFour}
           />
-        </div>
+        </Grid>
       )}
       {/* </Spinner> */}
     </>

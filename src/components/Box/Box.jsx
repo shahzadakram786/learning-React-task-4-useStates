@@ -1,8 +1,9 @@
 import { Suspense, useState } from "react";
-import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
+// import { Skeleton, SkeletonCircle, SkeletonText } from "@chakra-ui/react";
 import "./Box.css";
 import Input from "../inputComp/Input";
 import CardAfterSave from "../aftersave/CardAfterSave";
+import { Button } from "@chakra-ui/react";
 // import axios from "axios";
 
 const Box = ({
@@ -30,18 +31,11 @@ const Box = ({
   return (
     <>
       <div className="mainContainers">
-        {/* <Skeleton> */}
         <div className="card">
           <div className="insideCard">
-            {/* <Skeleton> */}
-            {/* <Suspense> */}
             <h1>{title}</h1>
-            {/* </Suspense> */}
-            {/* </Skeleton> */}
 
-            {/* <Skeleton> */}
             <button>' ' '</button>
-            {/* </Skeleton> */}
           </div>
           <div className="line"></div>
           {input ? (
@@ -74,7 +68,16 @@ const Box = ({
               );
             })}
           <div className="addbuttondiv">
-            <button onClick={handleClick}>+ Add another Card</button>
+            <Button
+              mt="15px"
+              size="sm"
+              color="blue.400"
+              colorScheme="blue"
+              variant="outline"
+              onClick={handleClick}
+            >
+              + Add another Card
+            </Button>
           </div>
         </div>
         {/* </Skeleton> */}

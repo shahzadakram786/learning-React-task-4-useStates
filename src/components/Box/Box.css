@@ -3,7 +3,8 @@
     padding: 10px;
     display: flex;
     justify-content: center;
-    width: 300px;
+    flex-wrap: wrap;
+    /* width: 25%; */
     height: fit-content;
     border-radius: 10px;
     box-shadow: 5px 5px 10px black;
@@ -29,8 +30,9 @@
     text-align: left
 }
 
-.insideCard button {
-    /* color: white; */
+
+/* .insideCard button {
+
     color: white;
     padding-top: 10px;
     font-weight: bolder;
@@ -38,25 +40,26 @@
     border: none;
     background: none;
     transition: 0.3s ease-in-out;
+} */
+
+.insideCard button:hover {
+    border-bottom: 1px solid white;
 }
 
 
-/* .insideCard button:hover {
-    border-bottom: 1px solid white;
-} */
+/* .afterAddButton {
 
-.afterAddButton {
-    /* color: white; */
     height: auto;
     border-radius: 10px;
     box-shadow: 1px 1px 10px grey;
     transition: 0.3s ease;
     margin-bottom: 16px;
-}
+} */
 
-.afterAddButton:hover {
+
+/* .afterAddButton:hover {
     box-shadow: 5px 5px 10px grey;
-}
+} */
 
 .afterSave {
     padding: 10px;
@@ -132,21 +135,21 @@ input {
     margin-bottom: 2rem;
 }
 
-.addbuttondiv button {
+
+/* .addbuttondiv button {
     border: none;
-    /* color: rgb(48, 48, 217); */
     color: rgb(198, 158, 158);
     font-size: 16px;
     cursor: pointer;
     background: none;
     transition: 0.3s ease;
     margin-bottom: 10px;
-}
+} */
 
-.addbuttondiv button:hover {
+
+/* .addbuttondiv button:hover {
     border-bottom: 1px solid white;
-    /* background-color: rgba(21, 184, 184, 0.281); */
-}
+} */
 
 
 /* .box{

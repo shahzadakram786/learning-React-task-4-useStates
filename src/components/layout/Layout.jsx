@@ -2,14 +2,37 @@ import React from "react";
 import Header from "../pagesNew/Header";
 import Footer from "../pagesNew/Footer";
 import { Outlet } from "react-router-dom";
+import { Box, Flex } from "@chakra-ui/react";
 
 const Layout = () => {
   return (
-    <div>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    <Flex direction="column">
+      <Box
+        as="header"
+        position="fixed"
+        top="0"
+        left="0"
+        width="100%"
+        zIndex="1000"
+        bg="white"
+      >
+        <Header />
+      </Box>
+      <Box as="main" Flex="1" overflowY="auto" mt="60px" mb="60px" h="auto">
+        <Outlet />
+      </Box>
+      <Box
+        as="footer"
+        position="fixed"
+        bottom="0"
+        left="0"
+        width="100%"
+        zIndex="1000"
+        // bg="white"
+      >
+        <Footer />
+      </Box>
+    </Flex>
   );
 };
 

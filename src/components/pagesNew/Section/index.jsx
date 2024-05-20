@@ -3,7 +3,7 @@ import ReactDOM from "react-dom/client";
 import drops from "../Section/card/index";
 import CardList from "./CardList";
 import BuyCards from "./CardList/Buycards";
-import { Box, Divider, Flex, Heading, Spinner } from "@chakra-ui/react";
+import { Box, Divider, Flex, Heading, Spinner, Grid } from "@chakra-ui/react";
 
 let buyCard = [];
 
@@ -40,6 +40,7 @@ function Section() {
           color="blue.500"
           boxShadow="1px 1px 2px blue.500"
           size="xl"
+          mt="250px"
         />
       ) : (
         <Box
@@ -64,8 +65,16 @@ function Section() {
             <Flex justifyContent={"center"}>
               <Divider my={"3em"} border={"2px solid white"} />
             </Flex>
-
-            <CardList drops={drops} addCardToBuyList={addCardToBuyList} />
+            <Grid
+              templateColumns={{
+                base: "repeat(1,1fr)",
+                md: "repeat(2,1fr)",
+                lg: "repeat(3,1fr)",
+                xl: "repeat(4,1fr)",
+              }}
+            >
+              <CardList drops={drops} addCardToBuyList={addCardToBuyList} />
+            </Grid>
           </Box>
           <Box className="buy-cards">
             <Box>

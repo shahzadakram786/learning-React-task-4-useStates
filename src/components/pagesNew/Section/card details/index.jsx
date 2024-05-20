@@ -92,7 +92,7 @@ function CardCom({ cardData, addCardToBuyList }) {
             color="white"
             mr="auto"
             ml="auto"
-            background=" linear-gradient(60deg, #000046, #1cb5e0)"
+            background=" linear-gradient(to left, #000046, #1cb5e0)"
             _hover={{
               // cursor: "pointer",
               boxShadow: "2px 2px 10px #1cb5e0",

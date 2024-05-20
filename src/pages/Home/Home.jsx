@@ -65,9 +65,11 @@ function Home({ handleCancel }) {
           color="blue.500"
           boxShadow="1px 1px 2px blue.500"
           size="xl"
+          mt="250px"
         />
       ) : (
         <Grid
+          background=" linear-gradient(to left, #000046, #1cb5e0)"
           templateColumns={{
             base: "repeat(1,1fr)",
             md: "repeat(2,1fr)",

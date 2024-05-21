@@ -20,7 +20,7 @@ const Layout = () => {
       </Box>
 
       <Box as="main" Flex="1" mt="60px" mb="60px" h="auto">
-        <Outlet />
+        <Outlet mt="40px" mb="40px" />
       </Box>
 
       <Box

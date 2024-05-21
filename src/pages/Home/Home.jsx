@@ -69,7 +69,7 @@ function Home({ handleCancel }) {
         />
       ) : (
         <Grid
-          background=" linear-gradient(to left, #000046, #1cb5e0)"
+          // background=" linear-gradient(to left, #000046, #1cb5e0)"
           templateColumns={{
             base: "repeat(1,1fr)",
             md: "repeat(2,1fr)",
@@ -77,17 +77,12 @@ function Home({ handleCancel }) {
             xl: "repeat(4,1fr)",
           }}
           gap="2rem"
-          style={
-            {
-              // display: "grid",
-              // gridTemplateColumns: "repeat(4 ,1fr)",
-              // width: "100%",
-              // gridTemplateRows: "auto",
-              // gap: "1rem",
-            }
-          }
-          h="20vmin"
-          bg="red"
+          // h="20vmin"
+          mt="40px"
+          mb="40px"
+          border="2px solid black"
+
+          // bg="red"
         >
           <Box
             handleCancel={handleCancel}

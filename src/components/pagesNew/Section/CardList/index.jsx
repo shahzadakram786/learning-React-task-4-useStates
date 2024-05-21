@@ -1,10 +1,20 @@
 import React from "react";
 import CardCom from "../card details";
+import { Grid } from "@chakra-ui/react";
 
 function CardList({ drops, addCardToBuyList }) {
   return (
     <>
-      <div className="cardsContainer" style={{ display: "flex", gap: "2rem", padding: "0 2rem", }}>
+      <Grid
+        // w="100%"
+        gap="26px"
+        templateColumns={{
+          base: "repeat(1,1fr)",
+          md: "repeat(2,1fr)",
+          lg: "repeat(3,1fr)",
+          xl: "repeat(5,1fr)",
+        }}
+      >
         {drops.map((item, index) => {
           return (
             <CardCom
@@ -14,7 +24,7 @@ function CardList({ drops, addCardToBuyList }) {
             />
           );
         })}
-      </div>
+      </Grid>
     </>
   );
 }

@@ -1,32 +1,54 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Box, Center, Heading, Text, Button, Link } from "@chakra-ui/react";
 
 const NotFound = () => {
   return (
-    <div>
-      <main class="grid min-h-full place-items-center bg-white px-6 py-24 sm:py-32 lg:px-8">
-        <div class="text-center">
-          <p class="text-base font-semibold text-indigo-600">404</p>
-          <h1 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 sm:text-5xl">
+    <Box className="min-h-full bg-white px-6 py-24 sm:py-32 lg:px-8">
+      <Center className="place-items-center">
+        <Box textAlign="center">
+          <Text fontSize="base" fontWeight="semibold" color="indigo.600">
+            404
+          </Text>
+          <Heading
+            as="h1"
+            mt={4}
+            fontSize={{ base: "3xl", sm: "5xl" }}
+            fontWeight="bold"
+            lineHeight="tight"
+            color="gray.900"
+          >
             Page not found
-          </h1>
-          <p class="mt-6 text-base leading-7 text-gray-600">
-            Sorry, we couldn’t find the page you’re looking for.
-          </p>
-          <div class="mt-10 flex items-center justify-center gap-x-6">
-            <Link
+          </Heading>
+          <Text mt={6} fontSize="base" lineHeight="7" color="gray.600">
+            Sorry, we couldn't find the page your'e looking for.
+          </Text>
+          <Box mt={10} display="flex" justifyContent="center" gap={6}>
+            <Button
+              as={Link}
               href="#"
-              class="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              bg="blue.600"
+              px={3.5}
+              py={2.5}
+              fontSize="sm"
+              fontWeight="semibold"
+              color="white"
+              shadow="sm"
+              _hover={{ bg: "indigo.500" }}
+              _focus={{
+                outline: "2px solid",
+                outlineColor: "indigo.600",
+                outlineOffset: "2px",
+              }}
             >
               Go back home
-            </Link>
-            <Link href="#" class="text-sm font-semibold text-gray-900">
+            </Button>
+            <Link href="#" fontSize="sm" fontWeight="semibold" color="gray.900">
               Contact support <span aria-hidden="true">&rarr;</span>
             </Link>
-          </div>
-        </div>
-      </main>
-    </div>
+          </Box>
+        </Box>
+      </Center>
+    </Box>
   );
 };
 

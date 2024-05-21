@@ -28,6 +28,8 @@ function Header() {
         <Navigation />
 
         <Avatar
+          _hover={{ cursor: "pointer" }}
+          _
           size="md"
           src="https://media.licdn.com/dms/image/D4D03AQGskfzPEgOe5w/profile-displayphoto-shrink_200_200/0/1689354757691?e=1721260800&v=beta&t=JMeQfQs_L4kEFGRT50PcOW5o4KjhpZ32WuWA7D5NUbY"
         >

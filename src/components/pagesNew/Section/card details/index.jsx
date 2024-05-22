@@ -35,9 +35,7 @@ function CardCom({ cardData, addCardToBuyList }) {
           transform: "scale(1.02)",
         }}
       >
-        {" "}
         <CardBody>
-          {" "}
           <Image
             src={cardData.image}
             alt="shoes"
@@ -48,9 +46,8 @@ function CardCom({ cardData, addCardToBuyList }) {
             _hover={{
               cursor: "pointer",
             }}
-          />{" "}
+          />
           <Box className="text_parent">
-            {" "}
             <Heading
               color="white"
               fontSize="16px"
@@ -58,28 +55,23 @@ function CardCom({ cardData, addCardToBuyList }) {
               mt="1rem"
               textAlign="left"
             >
-              {" "}
               {cardData.title}
               {/* {cardData.verified ? <VscVerifiedFilled className="verified" /> : ""} */}
-            </Heading>{" "}
+            </Heading>
             <Flex
               className="text_child"
               textTransform="capitalize"
               mt="16px"
               justifyContent="space-between"
             >
-              {" "}
               <Box textAlign="left">
-                {" "}
                 <Heading as="h4" size="sm" color="white">
-                  {" "}
                   {cardData.des1}
-                </Heading>{" "}
+                </Heading>
                 <Heading as="h4" size="sm" color="wheat">
-                  {" "}
                   {cardData.price1}
-                  <span> {cardData.curr1}</span>{" "}
-                </Heading>{" "}
+                  <span> {cardData.curr1}</span>
+                </Heading>
               </Box>{" "}
               <Box textAlign="left">
                 {" "}

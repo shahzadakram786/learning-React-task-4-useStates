@@ -11,6 +11,7 @@ import {
   Flex,
 } from "@chakra-ui/react";
 import { Avatar, AvatarBadge } from "@chakra-ui/react"; // import { PiDotsNineBold } from "react-icons/pi";
+import AfterAvatar from "./afterAvatar/AfterAvatar";
 // import img1 from "../Header/imges/dp-transformed.png"
 function Header() {
   return (
@@ -35,6 +36,7 @@ function Header() {
         >
           <AvatarBadge boxSize="1em" bg="green.500" />
         </Avatar>
+        <AfterAvatar />
       </Flex>
     </>
   );

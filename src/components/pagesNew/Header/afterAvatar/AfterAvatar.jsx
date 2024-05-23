@@ -1,11 +1,15 @@
-import { Box, Flex, Image, Heading, Avatar, Input } from "@chakra-ui/react";
+import { Box, Flex, Image, Heading, Avatar } from "@chakra-ui/react";
 import React from "react";
 import InputPass from "./inputPass/InputPass";
 
 const AfterAvatar = () => {
   return (
     <Flex
-      borderRadius={25}
+      boxShadow="2px 2px 10px black"
+      pos="absolute"
+      top="75px"
+      zIndex="5"
+      borderRadius="0 0 25px 25px"
       p="10px"
       border="1px solid black"
       background="grey"
@@ -27,14 +31,7 @@ const AfterAvatar = () => {
           Sign in
         </Heading>
         <Flex direction="column">
-          <Input
-            place
-            color="white"
-            placeholder="Email or Number"
-            _placeholder={{ color: "black" }}
-            size="md"
-            w="auto"
-          />
+          {/*this is where i bring the inputs  */}
           <InputPass />
         </Flex>
       </Flex>

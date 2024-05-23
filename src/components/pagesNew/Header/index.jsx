@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./style.css";
 import Navigation from "../../navigationBar/Navigation";
 import {
@@ -14,6 +14,8 @@ import { Avatar, AvatarBadge } from "@chakra-ui/react"; // import { PiDotsNineBo
 import AfterAvatar from "./afterAvatar/AfterAvatar";
 // import img1 from "../Header/imges/dp-transformed.png"
 function Header() {
+  const [AvatarOn, setAvatarOn] = useState(false);
+
   return (
     <>
       <Flex
@@ -32,11 +34,16 @@ function Header() {
           _hover={{ cursor: "pointer" }}
           _
           size="md"
-          src="https://media.licdn.com/dms/image/D4D03AQGskfzPEgOe5w/profile-displayphoto-shrink_200_200/0/1689354757691?e=1721260800&v=beta&t=JMeQfQs_L4kEFGRT50PcOW5o4KjhpZ32WuWA7D5NUbY"
+          src="https://bit.ly/broken-link"
+          bg="grey"
+          onClick={() => {
+            setAvatarOn(!AvatarOn);
+          }}
+          // src="https://media.licdn.com/dms/image/D4D03AQGskfzPEgOe5w/profile-displayphoto-shrink_200_200/0/1689354757691?e=1721260800&v=beta&t=JMeQfQs_L4kEFGRT50PcOW5o4KjhpZ32WuWA7D5NUbY"
         >
-          <AvatarBadge boxSize="1em" bg="green.500" />
+          {/* <AvatarBadge boxSize="1em" bg="green.500" /> */}
         </Avatar>
-        <AfterAvatar />
+        {AvatarOn && <AfterAvatar />}
       </Flex>
     </>
   );

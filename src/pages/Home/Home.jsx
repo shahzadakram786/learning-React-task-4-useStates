@@ -77,7 +77,6 @@ function Home({ handleCancel }) {
             xl: "repeat(4,1fr)",
           }}
           gap="2rem"
-          // h="20vmin"
           mt="40px"
           mb="40px"
           border="2px solid black"

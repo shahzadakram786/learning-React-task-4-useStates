@@ -3,17 +3,18 @@ import React from "react";
 import { RouterProvider } from "react-router-dom";
 import "./App.css";
 import router from "./routes/routes";
-// import Home from "./pages/Home/Home";
-// import Box from './components/Box/Box';
+import { Provider } from "react-redux";
+
 import { ChakraProvider } from "@chakra-ui/react";
+import store from "./store/store";
 
 function App() {
   return (
     <>
       <ChakraProvider>
-        <div className="App">
+        <Provider store={store}>
           <RouterProvider router={router} />{" "}
-        </div>{" "}
+        </Provider>{" "}
       </ChakraProvider>{" "}
     </>
   );

@@ -10,7 +10,9 @@ import {
   Heading,
   Image,
 } from "@chakra-ui/react";
-import React from "react";
+import React, { useState } from "react";
+
+// import card from "../card";
 
 // import { VscVerifiedFilled } from "react-icons/vsc";
 
@@ -72,26 +74,21 @@ function CardCom({ cardData, addCardToBuyList }) {
                   {cardData.price1}
                   <span> {cardData.curr1}</span>
                 </Heading>
-              </Box>{" "}
+              </Box>
               <Box textAlign="left">
-                {" "}
                 <Heading as="h4" size="sm" color="white">
-                  {" "}
                   {cardData.des2}
-                </Heading>{" "}
+                </Heading>
                 <Heading as="h4" size="sm" color="wheat">
-                  {" "}
                   {cardData.price2}
-                  <span> {cardData.curr2}</span>{" "}
-                </Heading>{" "}
-              </Box>{" "}
-            </Flex>{" "}
-          </Box>{" "}
-        </CardBody>{" "}
+                  <span> {cardData.curr2}</span>
+                </Heading>
+              </Box>
+            </Flex>
+          </Box>
+        </CardBody>
         <CardFooter>
-          {" "}
           <Flex justifyContent="center" alignItems="center" w="100%">
-            {" "}
             <Button
               color="white"
               mr="auto"
@@ -104,11 +101,10 @@ function CardCom({ cardData, addCardToBuyList }) {
               }}
               onClick={() => BuyCards(cardData)}
             >
-              {" "}
-              Buy Card{" "}
-            </Button>{" "}
-          </Flex>{" "}
-        </CardFooter>{" "}
+              Buy Card
+            </Button>
+          </Flex>
+        </CardFooter>
       </Card>
     </Box>
   );

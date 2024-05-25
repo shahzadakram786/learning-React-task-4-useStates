@@ -4,11 +4,18 @@ import drops from "../Section/card/index";
 import CardList from "./CardList";
 import BuyCards from "./CardList/Buycards";
 import { Box, Divider, Flex, Heading, Spinner, Grid } from "@chakra-ui/react";
+import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
+import { setArts } from "../../../redux/arts/artsSlicer";
 
 let buyCard = [];
 
 function Section() {
   const [LoadingAb, setLoadingAb] = useState(true);
+
+  const dispatch = useDispatch();
+  dispatch(setArts(drops));
+  const { arts } = useSelector((state) => state.arts);
 
   const addCardToBuyList = (cardData) => {
     buyCard.push(cardData);
@@ -73,7 +80,7 @@ function Section() {
                 xl: "repeat(4,1fr)",
               }}
             >
-              <CardList drops={drops} addCardToBuyList={addCardToBuyList} />
+              <CardList drops={arts} addCardToBuyList={addCardToBuyList} />
             </Grid>
           </Box>
           <Box className="buy-cards">
